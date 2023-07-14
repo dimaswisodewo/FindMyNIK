@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -32,19 +33,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-jz-q8W">
-                                <rect key="frame" x="0.0" y="0.0" width="430" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="332"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nBc-nP-EOv">
-                                        <rect key="frame" x="137.33333333333337" y="68" width="155.66666666666663" height="33.666666666666657"/>
+                                        <rect key="frame" x="136.66666666666666" y="80" width="156.99999999999997" height="33.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find My" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C5-0O-Re5">
-                                                <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="33.666666666666664"/>
-                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll9-04-Yfs">
-                                                <rect key="frame" x="97.666666666666657" y="0.0" width="58" height="33.666666666666664"/>
+                                                <rect key="frame" x="99" y="0.0" width="58" height="33.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="OCRAExtended" family="OCR A Extended" pointSize="32"/>
                                                 <color key="textColor" name="PrimaryBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -52,7 +53,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Membantu mencari Nomor Induk Kependudukan kamu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffI-FX-Ba6">
-                                        <rect key="frame" x="20" y="113.66666666666667" width="390" height="19.666666666666671"/>
+                                        <rect key="frame" x="20" y="125.66666666666667" width="390" height="19.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                         <color key="textColor" name="SecondaryGrey"/>
                                         <nil key="highlightedColor"/>
@@ -60,16 +61,226 @@
                                 </subviews>
                                 <color key="backgroundColor" name="PrimaryGrey"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="9de-zs-fK8"/>
+                                    <constraint firstAttribute="height" constant="332" id="9de-zs-fK8"/>
                                     <constraint firstItem="nBc-nP-EOv" firstAttribute="centerX" secondItem="aWZ-jz-q8W" secondAttribute="centerX" id="LfK-zK-7Mz"/>
                                     <constraint firstAttribute="trailing" secondItem="ffI-FX-Ba6" secondAttribute="trailing" constant="20" id="MhI-aT-6DB"/>
-                                    <constraint firstItem="nBc-nP-EOv" firstAttribute="top" secondItem="aWZ-jz-q8W" secondAttribute="top" constant="68" id="NVh-iW-NRg"/>
+                                    <constraint firstItem="nBc-nP-EOv" firstAttribute="top" secondItem="aWZ-jz-q8W" secondAttribute="top" constant="80" id="NVh-iW-NRg"/>
                                     <constraint firstItem="ffI-FX-Ba6" firstAttribute="leading" secondItem="aWZ-jz-q8W" secondAttribute="leading" constant="20" id="fQA-am-Y9D"/>
                                     <constraint firstItem="ffI-FX-Ba6" firstAttribute="top" secondItem="nBc-nP-EOv" secondAttribute="bottom" constant="12" id="zmp-k5-hhI"/>
                                 </constraints>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-uz-0J1">
+                                <rect key="frame" x="0.0" y="332" width="430" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWX-Vu-Qof">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="845"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-k7-wEs" userLabel="Stack View Provinsi">
+                                                <rect key="frame" x="20" y="120" width="390" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provinsi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-u2-nMr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provinsi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htN-3R-CXa" customClass="TextFieldNoCopyPaste" customModule="FindMyNIK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="b67-kc-nLc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="htN-3R-CXa" secondAttribute="trailing" id="Boj-P4-sDa"/>
+                                                    <constraint firstItem="htN-3R-CXa" firstAttribute="leading" secondItem="2gh-k7-wEs" secondAttribute="leading" id="Xe1-s5-clP"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Ku-JTg" userLabel="Stack View Kabupaten">
+                                                <rect key="frame" x="20" y="233" width="390" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabupaten" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-Oy-eqp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kabupaten" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-sy-7UD" customClass="TextFieldNoCopyPaste" customModule="FindMyNIK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="huw-6g-eeb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="5hh-sy-7UD" firstAttribute="leading" secondItem="fUD-Ku-JTg" secondAttribute="leading" id="F6g-wR-qxm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5hh-sy-7UD" secondAttribute="trailing" id="nda-pC-tQv"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-Xk-U1P" userLabel="Stack View Kecamatan">
+                                                <rect key="frame" x="20" y="346" width="390" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kecamatan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Js-8g-MPf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kecamatan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-7n-RR3" customClass="TextFieldNoCopyPaste" customModule="FindMyNIK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="4Ce-KQ-ETa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="2e3-7n-RR3" secondAttribute="trailing" id="4t2-E4-kHk"/>
+                                                    <constraint firstItem="2e3-7n-RR3" firstAttribute="leading" secondItem="XU1-Xk-U1P" secondAttribute="leading" id="rHa-Y4-7En"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="czu-zT-s7U" userLabel="Stack View Jenis Kelamin">
+                                                <rect key="frame" x="20" y="459" width="390" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis Kelamin" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-jS-LfC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jenis Kelamin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJT-5e-xuO" customClass="TextFieldNoCopyPaste" customModule="FindMyNIK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="HT0-Bs-J1e"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="pJT-5e-xuO" firstAttribute="leading" secondItem="czu-zT-s7U" secondAttribute="leading" id="6Vg-eH-q5t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pJT-5e-xuO" secondAttribute="trailing" id="M7V-2m-lRH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oro-yM-U6e" userLabel="Stack View Tanggal Lahir">
+                                                <rect key="frame" x="20" y="572" width="390" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal Lahir" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-mS-sL0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tanggal Lahir" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVN-96-W6P" customClass="TextFieldNoCopyPaste" customModule="FindMyNIK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="bgE-M0-PFX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="kVN-96-W6P" firstAttribute="leading" secondItem="oro-yM-U6e" secondAttribute="leading" id="CEj-FE-xgF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kVN-96-W6P" secondAttribute="trailing" id="mwZ-dM-CRg"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r0d-fH-Th1" userLabel="Stack View Kode Unik">
+                                                <rect key="frame" x="20" y="685" width="390" height="81"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kode Unik" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPr-B6-osn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60.666666666666664" height="17"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kode Unik" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-cS-DRV" customClass="TextFieldNoCopyPaste" customModule="FindMyNIK" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="56" id="dvM-hR-g3W"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="fZJ-cS-DRV" secondAttribute="trailing" id="cq3-Vl-C5l"/>
+                                                    <constraint firstItem="fZJ-cS-DRV" firstAttribute="leading" secondItem="r0d-fH-Th1" secondAttribute="leading" id="kO1-8r-Cp3"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="HDZ-EB-iw2">
+                                                <rect key="frame" x="119.33333333333333" y="815" width="191.66666666666669" height="26"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h3-XQ-iHC">
+                                                        <rect key="frame" x="0.0" y="6" width="49.333333333333336" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhC-ap-TMj">
+                                                        <rect key="frame" x="52.333333333333329" y="0.0" width="62" height="26"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="10"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Dividedsign">
+                                                            <color key="titleColor" name="AccentColor"/>
+                                                        </state>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Piqo Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOm-Qm-5UU">
+                                                        <rect key="frame" x="117.33333333333334" y="6" width="74.333333333333343" height="14"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                                        <color key="textColor" name="PrimaryGrey"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="czu-zT-s7U" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="1DS-EW-kLg"/>
+                                            <constraint firstAttribute="bottom" secondItem="HDZ-EB-iw2" secondAttribute="bottom" constant="4" id="2D6-G3-g3H"/>
+                                            <constraint firstItem="fUD-Ku-JTg" firstAttribute="top" secondItem="2gh-k7-wEs" secondAttribute="bottom" constant="32" id="AwN-8f-aq9"/>
+                                            <constraint firstItem="2gh-k7-wEs" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="Cm1-wa-jCV"/>
+                                            <constraint firstAttribute="trailing" secondItem="XU1-Xk-U1P" secondAttribute="trailing" constant="20" id="DAk-fi-Er2"/>
+                                            <constraint firstItem="r0d-fH-Th1" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="G0V-AM-OJu"/>
+                                            <constraint firstItem="fUD-Ku-JTg" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="Ino-zs-mI9"/>
+                                            <constraint firstAttribute="trailing" secondItem="czu-zT-s7U" secondAttribute="trailing" constant="20" id="Mgn-kZ-5G0"/>
+                                            <constraint firstAttribute="trailing" secondItem="2gh-k7-wEs" secondAttribute="trailing" constant="20" id="NsS-fA-XJF"/>
+                                            <constraint firstItem="r0d-fH-Th1" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="aks-Zn-zBI"/>
+                                            <constraint firstAttribute="trailing" secondItem="r0d-fH-Th1" secondAttribute="trailing" constant="20" id="anr-ea-ql6"/>
+                                            <constraint firstAttribute="height" constant="845" id="bLQ-tc-T6v"/>
+                                            <constraint firstItem="HDZ-EB-iw2" firstAttribute="centerX" secondItem="sWX-Vu-Qof" secondAttribute="centerX" id="c7h-Ea-kEB"/>
+                                            <constraint firstItem="czu-zT-s7U" firstAttribute="top" secondItem="XU1-Xk-U1P" secondAttribute="bottom" constant="32" id="eYA-9q-Yla"/>
+                                            <constraint firstItem="oro-yM-U6e" firstAttribute="top" secondItem="czu-zT-s7U" secondAttribute="bottom" constant="32" id="g10-8T-Qhh"/>
+                                            <constraint firstItem="r0d-fH-Th1" firstAttribute="top" secondItem="oro-yM-U6e" secondAttribute="bottom" constant="32" id="kPr-SP-btL"/>
+                                            <constraint firstAttribute="trailing" secondItem="fUD-Ku-JTg" secondAttribute="trailing" constant="20" id="nlV-9k-aSz"/>
+                                            <constraint firstItem="2gh-k7-wEs" firstAttribute="top" secondItem="sWX-Vu-Qof" secondAttribute="top" constant="120" id="t0e-zq-yKD"/>
+                                            <constraint firstAttribute="trailing" secondItem="r0d-fH-Th1" secondAttribute="trailing" constant="20" id="vNq-lz-zwh"/>
+                                            <constraint firstAttribute="trailing" secondItem="oro-yM-U6e" secondAttribute="trailing" constant="20" id="vuk-7y-c5F"/>
+                                            <constraint firstItem="XU1-Xk-U1P" firstAttribute="top" secondItem="fUD-Ku-JTg" secondAttribute="bottom" constant="32" id="vwm-ZG-kce"/>
+                                            <constraint firstItem="oro-yM-U6e" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="wJ8-7h-LI1"/>
+                                            <constraint firstItem="XU1-Xk-U1P" firstAttribute="leading" secondItem="sWX-Vu-Qof" secondAttribute="leading" constant="20" id="x5U-hc-G7P"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sWX-Vu-Qof" firstAttribute="leading" secondItem="q6S-63-qdY" secondAttribute="leading" id="1hr-9e-M0W"/>
+                                    <constraint firstItem="Jvv-27-XwF" firstAttribute="height" secondItem="sWX-Vu-Qof" secondAttribute="height" id="2O4-Zh-pWm"/>
+                                    <constraint firstItem="sWX-Vu-Qof" firstAttribute="leading" secondItem="LZb-uz-0J1" secondAttribute="leading" id="56t-fF-KGs"/>
+                                    <constraint firstItem="sWX-Vu-Qof" firstAttribute="top" secondItem="LZb-uz-0J1" secondAttribute="top" id="Acy-bM-wzn"/>
+                                    <constraint firstAttribute="bottom" secondItem="sWX-Vu-Qof" secondAttribute="bottom" id="Atd-WB-F62"/>
+                                    <constraint firstAttribute="trailing" secondItem="sWX-Vu-Qof" secondAttribute="trailing" id="De3-Cl-lzD"/>
+                                    <constraint firstItem="q6S-63-qdY" firstAttribute="trailing" secondItem="sWX-Vu-Qof" secondAttribute="trailing" id="tmz-kd-Lea"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Jvv-27-XwF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="q6S-63-qdY"/>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ0-pI-gwk">
-                                <rect key="frame" x="20" y="176" width="390" height="219.33333333333337"/>
+                                <rect key="frame" x="20" y="192" width="390" height="219.33333333333337"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rF-Xl-ds8">
                                         <rect key="frame" x="0.0" y="159.33333333333331" width="390" height="60"/>
@@ -79,7 +290,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="o54-rq-L6k">
-                                        <rect key="frame" x="50" y="52.666666666666657" width="290" height="58"/>
+                                        <rect key="frame" x="50" y="60.666666666666657" width="290" height="58"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgr-YT-pss">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="25"/>
@@ -100,7 +311,7 @@
                                 <constraints>
                                     <constraint firstItem="o54-rq-L6k" firstAttribute="centerX" secondItem="mQ0-pI-gwk" secondAttribute="centerX" id="7Mt-cp-3Ww"/>
                                     <constraint firstAttribute="trailing" secondItem="9rF-Xl-ds8" secondAttribute="trailing" id="ALs-Zp-AFN"/>
-                                    <constraint firstItem="o54-rq-L6k" firstAttribute="centerY" secondItem="mQ0-pI-gwk" secondAttribute="centerY" constant="-28" id="KTa-vv-Cds"/>
+                                    <constraint firstItem="o54-rq-L6k" firstAttribute="centerY" secondItem="mQ0-pI-gwk" secondAttribute="centerY" constant="-20" id="KTa-vv-Cds"/>
                                     <constraint firstAttribute="bottom" secondItem="9rF-Xl-ds8" secondAttribute="bottom" id="R1v-6M-bWp"/>
                                     <constraint firstItem="o54-rq-L6k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mQ0-pI-gwk" secondAttribute="leading" constant="16" id="TVz-j9-ngn"/>
                                     <constraint firstAttribute="width" secondItem="mQ0-pI-gwk" secondAttribute="height" multiplier="16:9" id="YjE-jC-0Sd"/>
@@ -108,128 +319,30 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o54-rq-L6k" secondAttribute="trailing" constant="16" id="u7E-o6-uYX"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-k7-wEs">
-                                <rect key="frame" x="20" y="427.33333333333331" width="390" height="81"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provinsi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-u2-nMr">
-                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="17"/>
-                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
-                                        <color key="textColor" name="PrimaryGrey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provinsi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htN-3R-CXa">
-                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="b67-kc-nLc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="htN-3R-CXa" firstAttribute="leading" secondItem="2gh-k7-wEs" secondAttribute="leading" id="Ilq-IF-SE7"/>
-                                    <constraint firstAttribute="trailing" secondItem="htN-3R-CXa" secondAttribute="trailing" id="cnA-sW-y9J"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Ku-JTg">
-                                <rect key="frame" x="20" y="532.33333333333337" width="390" height="81"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kabupaten" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-Oy-eqp">
-                                        <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="17"/>
-                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
-                                        <color key="textColor" name="PrimaryGrey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kabupaten" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hh-sy-7UD">
-                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="huw-6g-eeb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="5hh-sy-7UD" firstAttribute="leading" secondItem="fUD-Ku-JTg" secondAttribute="leading" id="F6g-wR-qxm"/>
-                                    <constraint firstAttribute="trailing" secondItem="5hh-sy-7UD" secondAttribute="trailing" id="nda-pC-tQv"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XU1-Xk-U1P">
-                                <rect key="frame" x="20" y="637.33333333333337" width="390" height="81"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kecamatan" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Js-8g-MPf">
-                                        <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="17"/>
-                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
-                                        <color key="textColor" name="PrimaryGrey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kecamatan" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-7n-RR3">
-                                        <rect key="frame" x="0.0" y="25" width="390" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="56" id="4Ce-KQ-ETa"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2e3-7n-RR3" secondAttribute="trailing" id="4t2-E4-kHk"/>
-                                    <constraint firstItem="2e3-7n-RR3" firstAttribute="leading" secondItem="XU1-Xk-U1P" secondAttribute="leading" id="rHa-Y4-7En"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="HDZ-EB-iw2">
-                                <rect key="frame" x="119.33333333333333" y="872" width="191.66666666666669" height="26"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h3-XQ-iHC">
-                                        <rect key="frame" x="0.0" y="6" width="49.333333333333336" height="14"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
-                                        <color key="textColor" name="PrimaryGrey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhC-ap-TMj">
-                                        <rect key="frame" x="52.333333333333329" y="0.0" width="62" height="26"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="10"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Dividedsign">
-                                            <color key="titleColor" name="AccentColor"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Piqo Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOm-Qm-5UU">
-                                        <rect key="frame" x="117.33333333333334" y="6" width="74.333333333333343" height="14"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
-                                        <color key="textColor" name="PrimaryGrey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="BackgroundGrey"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fUD-Ku-JTg" secondAttribute="trailing" constant="20" id="1yN-cO-WqK"/>
                             <constraint firstItem="aWZ-jz-q8W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="32p-xI-xbA"/>
-                            <constraint firstItem="XU1-Xk-U1P" firstAttribute="top" secondItem="fUD-Ku-JTg" secondAttribute="bottom" constant="24" id="8OD-6y-KIU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HDZ-EB-iw2" secondAttribute="bottom" id="8y2-3o-r7Q"/>
-                            <constraint firstItem="HDZ-EB-iw2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AmO-Ou-RwJ"/>
-                            <constraint firstItem="fUD-Ku-JTg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QnX-KV-qxD"/>
+                            <constraint firstAttribute="bottom" secondItem="LZb-uz-0J1" secondAttribute="bottom" id="4av-xL-Ml9"/>
+                            <constraint firstItem="LZb-uz-0J1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IJ0-24-S95"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aWZ-jz-q8W" secondAttribute="trailing" id="RQe-Sw-f0M"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XU1-Xk-U1P" secondAttribute="trailing" constant="20" id="Utp-2R-qOP"/>
                             <constraint firstItem="aWZ-jz-q8W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bU5-v4-j2L"/>
                             <constraint firstItem="mQ0-pI-gwk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cT9-UU-ugx"/>
-                            <constraint firstItem="mQ0-pI-gwk" firstAttribute="top" secondItem="aWZ-jz-q8W" secondAttribute="bottom" constant="-124" id="dk3-gO-8zY"/>
-                            <constraint firstItem="2gh-k7-wEs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fwE-Co-V0M"/>
-                            <constraint firstItem="XU1-Xk-U1P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hQc-BC-WMw"/>
+                            <constraint firstItem="mQ0-pI-gwk" firstAttribute="top" secondItem="aWZ-jz-q8W" secondAttribute="bottom" constant="-140" id="dk3-gO-8zY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="LZb-uz-0J1" secondAttribute="leading" id="e9I-0q-sr2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mQ0-pI-gwk" secondAttribute="trailing" constant="20" id="irL-Pj-dVW"/>
-                            <constraint firstItem="fUD-Ku-JTg" firstAttribute="top" secondItem="2gh-k7-wEs" secondAttribute="bottom" constant="24" id="j1f-yn-F4A"/>
-                            <constraint firstItem="2gh-k7-wEs" firstAttribute="top" secondItem="mQ0-pI-gwk" secondAttribute="bottom" constant="32" id="sEh-tu-L9V"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2gh-k7-wEs" secondAttribute="trailing" constant="20" id="sqC-vL-iDP"/>
+                            <constraint firstItem="LZb-uz-0J1" firstAttribute="top" secondItem="aWZ-jz-q8W" secondAttribute="bottom" id="uLo-LS-iUv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthdayTextField" destination="kVN-96-W6P" id="vRe-p5-3cf"/>
                         <outlet property="cardBaseView" destination="mQ0-pI-gwk" id="3MU-63-cuL"/>
                         <outlet property="designCreditButton" destination="nhC-ap-TMj" id="iRG-us-jdR"/>
+                        <outlet property="genderTextField" destination="pJT-5e-xuO" id="yFx-1r-HKn"/>
                         <outlet property="kabupatenTextField" destination="5hh-sy-7UD" id="Ehw-fY-mBD"/>
                         <outlet property="kecamatanTextField" destination="2e3-7n-RR3" id="jsx-mj-aXy"/>
+                        <outlet property="kodeUnikTextField" destination="fZJ-cS-DRV" id="XyV-UB-oSn"/>
                         <outlet property="nikContainerView" destination="o54-rq-L6k" id="GCQ-d4-tcW"/>
                         <outlet property="nikLabel" destination="Jzk-JD-gim" id="eCo-Ui-V5g"/>
                         <outlet property="provinsiTextField" destination="htN-3R-CXa" id="Ocd-1P-fFN"/>
@@ -257,5 +370,8 @@
         <namedColor name="SecondaryGrey">
             <color red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
