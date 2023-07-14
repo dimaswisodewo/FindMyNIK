@@ -113,7 +113,8 @@ class ViewController: UIViewController {
         return startIndex..<endIndex
     }()
     
-    private var selectedTextField: UITextField?
+    private var selectedTextField: TextFieldNoCopyPaste?
+    private var previouslyArrayCount = 0
     
     private let pickerView: UIPickerView = {
         let picker = UIPickerView()
@@ -208,16 +209,15 @@ class ViewController: UIViewController {
     
     @objc private func selectGenderTextField() {
         selectedTextField = genderTextField
+        reloadPickerViewComponents()
     }
     
     @objc private func reloadPickerViewComponents() {
         DispatchQueue.main.async { [weak self] in
+            print("reload")
             guard let self = self else { return }
             self.pickerView.reloadAllComponents()
-            for i in 0..<self.pickerView.numberOfComponents {
-                self.pickerView.selectRow(0, inComponent: i, animated: true)
-                break
-            }
+            self.pickerView.selectRow(0, inComponent: 0, animated: false)
         }
     }
     
@@ -322,10 +322,6 @@ class ViewController: UIViewController {
     private func setKodeKecamatan(_ kode: String?) {
         kodeKecamatan = kode
     }
-    
-    private func setTanggalLahir(_ kode: String) {
-        
-    }
 
     private func addCardGradient() {
         let gradientLayer = CAGradientLayer()
@@ -367,12 +363,16 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch selectedTextField {
         case provinsiTextField:
+            previouslyArrayCount = provinsiArray.count
             return provinsiArray.count
         case kabupatenTextField:
+            previouslyArrayCount = kabupatenArray.count
             return kabupatenArray.count
         case kecamatanTextField:
+            previouslyArrayCount = kecamatanArray.count
             return kecamatanArray.count
         case genderTextField:
+            previouslyArrayCount = genderArray.count
             return genderArray.count
         default:
             return 0
@@ -382,12 +382,16 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch selectedTextField {
         case provinsiTextField:
+            if previouslyArrayCount != provinsiArray.count { return nil }
             return provinsiArray[row].namaProvinsi
         case kabupatenTextField:
+            if previouslyArrayCount != kabupatenArray.count { return nil }
             return kabupatenArray[row].namaKabupaten
         case kecamatanTextField:
+            if previouslyArrayCount != kecamatanArray.count { return nil }
             return kecamatanArray[row].namaKecamatan
         case genderTextField:
+            if previouslyArrayCount != genderArray.count { return nil }
             return genderArray[row]
         default:
             return nil
